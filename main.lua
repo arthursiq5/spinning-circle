@@ -6,6 +6,7 @@ origem = 125
 
 function love.load()
     imagem = love.graphics.newImage('img/circle.png')
+    cursor = love.graphics.newImage('img/minimalist_cursor.png')
     love.mouse.setVisible(false)
 end
 
@@ -23,4 +24,5 @@ end
 function love.draw()
     rot = angulo
     love.graphics.draw(imagem, posX, posY, rot, tam, tam, origem, origem)
+    love.graphics.draw(cursor, love.mouse.getX(), love.mouse.getY())
 end
